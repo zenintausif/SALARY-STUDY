@@ -21,3 +21,9 @@ plt.figure(figsize=(8, 6))
 sns.histplot(data['Age'], bins=20)
 plt.title('Age Distribution of Employees (Cleaned Data)')
 plt.show()
+
+#Code bar chart for salary distribution
+plt.figure(figsize=(8, 6))
+sns.histplot(data['Salary'])
+plt.title('Salary Distribution (Cleaned Data)')
+plt.show()
