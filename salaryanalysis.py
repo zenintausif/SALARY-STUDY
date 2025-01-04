@@ -17,15 +17,26 @@ print("\nMissing Values After Cleaning:\n")
 print(data.isnull().sum())
 
 #Code bar chart for age distribution
-plt.figure(figsize=(8, 6))
-sns.histplot(data['Age'], bins=20)
-plt.title('Age Distribution of Employees (Cleaned Data)')
+plt.figure(figsize=(10, 6))
+sns.histplot(data['Age'], bins=20, color='skyblue', edgecolor='black')
+plt.title('Age Distribution of Employees (Cleaned Data)', fontsize=14)
+plt.xlabel('Age', fontsize=12)
+plt.ylabel('Count', fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.xticks(fontsize=10)
+plt.yticks(fontsize=10)
 plt.show()
 
+
 #Code bar chart for salary distribution
-plt.figure(figsize=(8, 6))
-sns.histplot(data['Salary'])
-plt.title('Salary Distribution (Cleaned Data)')
+plt.figure(figsize=(10, 6))
+sns.histplot(data['Salary'], bins=30, color='mediumseagreen', edgecolor='black')
+plt.title('Salary Distribution (Cleaned Data)', fontsize=14, fontweight='bold')
+plt.xlabel('Salary (£)', fontsize=12)
+plt.ylabel('Count', fontsize=12)
+plt.grid(axis='y', linestyle='--', alpha=0.6)
+plt.xticks(fontsize=10)
+plt.yticks(fontsize=10)
 plt.show()
 
 #Salary by performance score 
