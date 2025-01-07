@@ -1,15 +1,18 @@
+#Importing appropriate libaries for visualisations
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#Reading in data set and presenting the first few rows
 data = pd.read_csv("Employe_Performance_dataset.csv")
 print(data.head())
 
+#Presenting values where data is missing
 print("Initial Missing Values:\n")
 print(data.isnull().sum())
 
-#Drop rows with missing values
+#Dropping rows with missing values
 data.dropna(subset=['Performance Score', 'Joining Date'], inplace=True)
 
 #Re-check for Missing Values Post-Cleaning
@@ -61,6 +64,7 @@ plt.yticks(fontsize=11)
 plt.grid(axis='y', linestyle='--', alpha=0.6)
 plt.show()
 
+#Salary by gender
 plt.figure(figsize=(10, 6))
 sns.boxplot(x='Gender', y='Salary', data=data, palette='Set2', width=0.6, boxprops={'linewidth': 2}, medianprops={'color': 'crimson', 'linewidth': 2})
 plt.title('Salary by Gender (Cleaned Data)', fontsize=14, fontweight='bold')
