@@ -18,7 +18,7 @@ The repository contains the following files and folders:
 ## **Dataset**
 - **Source**: The dataset was sourced from Kaggle.  
 - **Description**: Includes 1,000 entries and 12 columns detailing employee attributes such as age, gender, department, salary, performance score, and experience.  
-- **Preprocessing**: Missing performance scores (498 entries) were dropped, and duplicate checks ensured data consistency.
+- **Preprocessing**: Missing performance scores (498 entries) were dropped, and further checks ensured data consistency.
 
 ## **Setup Instructions**
 1. Clone the repository:  
