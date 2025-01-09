@@ -9,23 +9,23 @@ data = pd.read_csv("Employe_Performance_dataset.csv")
 print(data.head())
 
 #Presenting values where data is missing
-print("Initial Missing Values:\n")
+print("Initial Missing Values:")
 print(data.isnull().sum())
 
 #Dropping rows with missing values
 data.dropna(subset=['Performance Score', 'Joining Date'], inplace=True)
 
 #Re-check for Missing Values Post-Cleaning
-print("\nMissing Values After Cleaning:\n")
+print("Missing Values After Cleaning:")
 print(data.isnull().sum())
 
 #Code bar chart for age distribution
 plt.figure(figsize=(10, 6))
-sns.histplot(data['Age'], bins=20, color='skyblue', edgecolor='black')
+sns.histplot(data['Age'], bins=20, color='skyblue', edgecolor='black') #Colour and edge colour changes to make it more aesthetically pleasing
 plt.title('Age Distribution of Employees (Cleaned Data)', fontsize=14)
 plt.xlabel('Age', fontsize=12)
 plt.ylabel('Count', fontsize=12)
-plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.grid(axis='y', linestyle='--', alpha=0.7) #Once again, aesthetic adjustments have been made for linestyle
 plt.xticks(fontsize=10)
 plt.yticks(fontsize=10)
 plt.show()
